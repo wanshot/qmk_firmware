@@ -21,11 +21,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   |  @   |Grv/L1|AltShf|   \  |   !  |                                       | Left | Down |  Up  |Right | ~L1  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        | LGUI | TAB  |       | Alt  | Ctrl  |
+ *                                        | LGUI | END  |       | Alt  | Ctrl  |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Home |       | PgUp |        |      |
  *                                 | Space| BKSP |------|       |------|  ESC   |Enter |
- *                                 |      |      | End  |       | PgDn | /~MDIA |/~L2  |
+ *                                 |      |      | LGUI |       | PgDn | /~MDIA |/~L2  |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -37,12 +37,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         CTL_T(KC_ESC),  KC_A,              KC_S,           KC_D,   KC_F,   KC_G,
         KC_LSFT,        CTL_T(KC_Z),       KC_X,           KC_C,   KC_V,   KC_B,   ALL_T(KC_LANG2),
         KC_AT,          LT(SYMB,KC_GRV),   LALT(KC_LSFT),  KC_BSLS,KC_EXLM,
-                                           KC_LGUI,        KC_TAB,
+                                           KC_LGUI,        KC_END,
                                                                    KC_HOME,
-                                           KC_SPC,         KC_BSPC,KC_END,
+                                           KC_SPC,         KC_BSPC,KC_LGUI,
         // right hand
-             KC_7,           KC_8,   KC_9,    KC_0,    KC_LPRN, KC_RPRN,          KC_MINS,
-             TG(SYMB),       KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,             KC_EQL,
+             KC_7,           KC_8,   KC_9,    KC_0,    KC_LPRN, KC_RPRN,          KC_EQL,
+             TG(SYMB),       KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,             KC_MINS,
                              KC_H,   KC_J,    KC_K,    KC_L,    KC_SCLN,          KC_LBRC,
              MEH_T(KC_LANG1),KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          KC_RBRC,
                                   	 KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,         KC_FN1,
